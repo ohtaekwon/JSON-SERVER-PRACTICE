@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
-import Home from '../pages/Home';
 import LoginFormInput from './LoginFormInput';
 import './LoginForm.css';
 import { useState } from 'react';
 import { useRef } from 'react';
+import MainPage from '../pages/MainPage';
 
 const initialErrorData = {
   id: '',
@@ -35,7 +35,7 @@ export default function LoginForm(props) {
   return (
     <>
       {getId && getPw ? (
-        <Home />
+        <MainPage />
       ) : (
         <form id="form" className="form" onSubmit={handleSubmit}>
           <LoginFormInput

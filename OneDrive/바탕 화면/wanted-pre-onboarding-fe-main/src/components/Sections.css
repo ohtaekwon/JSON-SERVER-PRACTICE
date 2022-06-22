@@ -1,6 +1,8 @@
 .sections-wrapper {
   position: relative;
   top: 100%;
+  left: 0;
+  right: 0;
   width: 1270px;
   margin: 0 auto;
   /* transform: translateY(-50%); */

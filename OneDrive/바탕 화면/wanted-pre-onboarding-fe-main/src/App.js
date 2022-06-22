@@ -1,7 +1,5 @@
-import React, { useState, createContext } from 'react';
-import LoginForm from './components/LoginForm';
-// import LoginForm from './pages/LoginForm';
-// import PreAssignmentGuide from './pages/PreAssignmentGuide';
+import React, { useState, createContext, useEffect } from 'react';
+
 import LoginPage from './pages/LoginPage';
 
 const initialFormData = {
@@ -15,6 +13,17 @@ export const FormContext = createContext({
 
 function App() {
   const [formState, setFormState] = useState(initialFormData);
+
+  // 전역 State에 local값 저장
+  useEffect(() => {
+    if (window.localStorage.length !== 0) {
+      setFormState({
+        id: localStorage.getItem('id'),
+        pw: localStorage.getItem('pw'),
+      });
+    }
+  }, []);
+
   return (
     <FormContext.Provider value={{ formState, setFormState }}>
       <LoginPage />

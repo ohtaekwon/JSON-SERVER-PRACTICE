@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
-import Home from '../pages/Home';
+import Home from '../Home';
 import './LoginForm.css';
 
 // 정규표현식
