@@ -2,9 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Logo() {
+  const LogoStyle = {
+    diplay: 'inline-block',
+    widht: '100%',
+    height: '100%',
+  };
+  const LogoImage = {
+    width: '130px',
+    height: '30px',
+    position: 'relative',
+    top: '0',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    marin: 'auto',
+    alignItems: 'center',
+  };
   return (
-    <Link to="/" className="Logo">
-      <img src="../assets/Logo.png" alt="Logo" />
+    <Link to="/" className="Logo" style={LogoStyle}>
+      <img
+        src="https://raw.githubusercontent.com/ohtaekwon/wanted-pre-onboarding-fe/pre-test/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/wanted-pre-onboarding-fe-main/src/assets/Logo.png"
+        alt="Logo"
+        style={LogoImage}
+      />
     </Link>
   );
 }

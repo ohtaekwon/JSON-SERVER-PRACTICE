@@ -9,7 +9,7 @@ import './Gnb.css';
 
 export default function Gnb() {
   return (
-    <nav>
+    <nav className="Gnb--nav">
       <Logo className="Gnb--Logo" />
       <SearchBar className="Gnb--SearchBar" />
       <SubMenu className="Gnb--SubMenu" />

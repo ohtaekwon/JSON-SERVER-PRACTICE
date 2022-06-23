@@ -1,10 +1,10 @@
 header {
   position: sticky;
-  width: 1270px;
-  height: 150px;
-  left: 0;
+  width: 50%;
+  height: 60px;
+  left: 25%;
   top: 0;
-  /* max-width: 1270px; */
+  /* max-widt/h: 1270px; */
   margin: 0 auto;
-  background-color: orange;
+  /* background-color: orange; */
 }

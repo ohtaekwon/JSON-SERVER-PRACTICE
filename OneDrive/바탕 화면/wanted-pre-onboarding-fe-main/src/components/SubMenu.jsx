@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SubMenu.css';
 export default function SubMenu() {
   const handleClick = () => {
     localStorage.clear();
