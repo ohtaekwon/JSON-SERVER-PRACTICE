@@ -8,18 +8,21 @@ export default function FeedList({ feed }) {
   const inputRef = useRef();
   // const formContext = useContext(FormContext);
   const id = localStorage.getItem('id');
-  const [msgState, setMsgState] = useState([
-    {
-      id: '',
-      msg: '',
-      // date:
-    },
-  ]);
+  const initailMsg = {
+    id: '',
+    msg: '',
+    userName: '',
+    // date:
+  };
+  const [msgState, setMsgState] = useState([initailMsg]);
 
   const handleForm = (e) => {
     e.preventDefault();
+    console.log(msgState);
+    handleMsgInput();
+  };
+  const handleMsgInput = () => {
     const nextMsg = inputRef.current.value;
-    console.log(nextMsg);
     setMsgState((prev) => [
       ...prev,
       {
@@ -27,10 +30,11 @@ export default function FeedList({ feed }) {
         msg: nextMsg,
       },
     ]);
-    console.log(msgState);
   };
 
-  useEffect(() => {}, [msgState]);
+  useEffect(() => {
+    console.log(msgState);
+  }, []);
 
   return (
     <div className="FeedListItem">
@@ -52,7 +56,7 @@ export default function FeedList({ feed }) {
               );
             })}
         </ul>
-        {msgState && (
+        {msgState.msg && (
           <ul className="myMsgList">
             <li key={msgState.id}>
               {id} : {msgState.msg}
@@ -65,6 +69,7 @@ export default function FeedList({ feed }) {
           type="text"
           className="msg-input"
           ref={inputRef}
+          onChange={() => handleMsgInput}
           placeholder="  댓글 달기.."
         />
         <button type="submit">게시</button>
