@@ -1,9 +1,11 @@
 import React, { forwardRef } from 'react';
 import LoginFormInput from './LoginFormInput';
-import './LoginForm.css';
 import { useState } from 'react';
 import { useRef } from 'react';
+import Logo from './Logo';
+
 import MainPage from '../pages/MainPage';
+import './LoginForm.css';
 
 const initialErrorData = {
   id: '',
@@ -37,7 +39,8 @@ export default function LoginForm(props) {
       {getId && getPw ? (
         <MainPage />
       ) : (
-        <form id="form" className="form" onSubmit={handleSubmit}>
+        <form id="form" className="login-form" onSubmit={handleSubmit}>
+          <Logo />
           <LoginFormInput
             id={'id'}
             errorState={errorState}
@@ -60,13 +63,12 @@ export default function LoginForm(props) {
               placeholder: '비밀번호',
             }}
           />
-
           {errorState.id === true && errorState.pw === true ? (
             <button id="button" type="submit">
               로그인
             </button>
           ) : (
-            <button disabled id="button" type="submit">
+            <button id="button" type="submit" disabled>
               로그인
             </button>
           )}

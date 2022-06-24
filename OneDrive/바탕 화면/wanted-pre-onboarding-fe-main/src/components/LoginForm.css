@@ -1,7 +1,21 @@
-.login-page {
+/* .login-page {
   background-color: orange;
   display: block;
+} */
+
+.login-form {
+  margin: 10% 0;
+  position: absolute;
+  background-color: orange;
+  width: 70%;
+  height: 600px;
+  left: 15%;
+  text-align: center;
+  justify-content: center;
+  padding: 10%;
+  vertical-align: middle;
 }
+
 input {
   border: 1px solid black;
   height: 60px;
@@ -14,15 +28,12 @@ input:focus {
 }
 button {
   height: 30px;
-  width: 15%;
+  width: 25%;
 }
 .fail {
   border: 1px solid red;
 }
 
-form {
-  background-color: orange;
-}
 .border-error {
   border: 2px solid red;
 }
