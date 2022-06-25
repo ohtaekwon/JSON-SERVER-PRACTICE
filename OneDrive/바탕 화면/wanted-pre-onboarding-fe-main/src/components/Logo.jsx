@@ -21,7 +21,7 @@ export default function Logo() {
   return (
     <Link to="/" className="Logo" style={LogoStyle}>
       <img
-        src="https://raw.githubusercontent.com/ohtaekwon/wanted-pre-onboarding-fe/pre-test/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/wanted-pre-onboarding-fe-main/src/assets/Logo.png"
+        src={process.env.PUBLIC_URL + 'assets/Logo.png'}
         alt="Logo"
         style={LogoImage}
       />

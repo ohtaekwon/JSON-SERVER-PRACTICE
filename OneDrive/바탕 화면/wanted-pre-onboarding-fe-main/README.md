@@ -23,3 +23,10 @@
 
 - 구현한 기능 : 유효성 검사(아이디, 비밀번호) / 유효성 검사 실패시, 특수 효과 생성(빨간색 박스 테두리), 로그인 버튼 비활성화
 - 사용한 Hook : useState / useEffect
+
+## Assignment 4 - `Routing`
+
+## Assignment 5 - `Feeds`
+
+- 구현한 기능 : mock.json 파일에서 비동기로 로컬 서버와 통신하여 데이터를 불러온다.
+- 각 Feed마다 댓글 기능을 구현한다.

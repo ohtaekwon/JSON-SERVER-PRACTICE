@@ -64,11 +64,11 @@ export default function LoginForm(props) {
             }}
           />
           {errorState.id === true && errorState.pw === true ? (
-            <button id="button" type="submit">
+            <button id="button" type="submit" className="login-btn">
               로그인
             </button>
           ) : (
-            <button id="button" type="submit" disabled>
+            <button id="button" type="submit" className="login-btn" disabled>
               로그인
             </button>
           )}

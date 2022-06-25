@@ -18,11 +18,16 @@ export default function FeedList({ feed }) {
 
   const handleForm = (e) => {
     e.preventDefault();
-    console.log(msgState);
-    handleMsgInput();
-  };
-  const handleMsgInput = () => {
     const nextMsg = inputRef.current.value;
+    if (nextMsg.length === 0) {
+      return alert('빈 문자는 댓글을 달 수 없어요~');
+    } else {
+      handleMsgInput(nextMsg);
+      inputRef.current.value = '';
+    }
+  };
+  const handleMsgInput = (nextMsg) => {
+    // const nextMsg = inputRef.current.value;
     setMsgState((prev) => [
       ...prev,
       {
@@ -34,7 +39,7 @@ export default function FeedList({ feed }) {
 
   useEffect(() => {
     console.log(msgState);
-  }, []);
+  }, [msgState]);
 
   return (
     <div className="FeedListItem">
@@ -51,16 +56,22 @@ export default function FeedList({ feed }) {
             feed.comments.map((comment) => {
               return (
                 <li key={comment.id}>
-                  {comment.userName} : {comment.comment}
+                  <p>
+                    <strong>{comment.userName} :</strong> {comment.comment}
+                  </p>
                 </li>
               );
             })}
         </ul>
-        {msgState.msg && (
+        {msgState && (
           <ul className="myMsgList">
-            <li key={msgState.id}>
-              {id} : {msgState.msg}
-            </li>
+            {msgState.map((msg) => {
+              return (
+                <li key={msg.id}>
+                  {id} : {msg.msg}
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>

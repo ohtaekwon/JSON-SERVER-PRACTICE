@@ -20,7 +20,13 @@
       {
         "id": 3,
         "userName": "SON__7",
-        "comment": "It's Goooood",
+        "comment": "팔로우 신청합니다",
+        "isUser": false
+      },
+      {
+        "id": 4,
+        "userName": "dlwlrma",
+        "comment": "사진 너무 예뻐요",
         "isUser": false
       }
     ]
@@ -40,13 +46,13 @@
       {
         "id": 2,
         "userName": "BTS",
-        "comment": "This is Messege from BTS",
+        "comment": "ㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊㅊ",
         "isUser": false
       },
       {
         "id": 3,
         "userName": "SON__7",
-        "comment": "Nice One Sonny",
+        "comment": "좋아요!!",
         "isUser": false
       }
     ]
@@ -55,7 +61,7 @@
     "id": 3,
     "profile": "",
     "userName": "BTS",
-    "imgUrl": "https://images.unsplash.com/photo-1654612870183-e0472a97ff2f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjAxMTc5Mw&ixlib=rb-1.2.1&q=80&w=600",
+    "imgUrl": "https://images.unsplash.com/photo-1654612870183-e0472a97ff2f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjAxMTc5Mw&ixlib=rb-1.2.1&q=80&w=600",
     "comments": [
       {
         "id": 1,

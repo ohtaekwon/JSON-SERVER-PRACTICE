@@ -1,4 +1,5 @@
 header {
+  position: -webkit-sticky;
   position: sticky;
   width: 50%;
   height: 60px;

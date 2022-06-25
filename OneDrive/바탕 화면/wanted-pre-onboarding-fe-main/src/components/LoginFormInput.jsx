@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { FormContext } from '../App';
 
+import './LoginFormInput.css';
 const ID_REGX = new RegExp(
   '^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$'
 ); // 5~20자. 영문 소문자, 숫자. 특수기호(_),(-)만 사용 가능
-const PW_REGX = new RegExp('^[A-Z0-9]{8,}$'); // 대문자, 숫자, 특수문자, 8자이상
+const PW_REGX = new RegExp('^[A-Z0-9][$`~!@$!%*#^?&\\(\\)-_=+]{8,}$'); // 대문자, 숫자, 특수문자, 8자이상
 
 const ERROR_STATION = {
   required: 'border-error',
@@ -66,7 +67,7 @@ export default function LoginFormInput({
 
   return (
     <>
-      <div>
+      <div className="input-sections">
         <input
           id={id}
           ref={inputRef}
