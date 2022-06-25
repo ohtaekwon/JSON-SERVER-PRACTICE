@@ -6,6 +6,7 @@ import Logo from './Logo';
 
 import MainPage from '../pages/MainPage';
 import './LoginForm.css';
+import Background from './Background';
 
 const initialErrorData = {
   id: '',
@@ -39,40 +40,43 @@ export default function LoginForm(props) {
       {getId && getPw ? (
         <MainPage />
       ) : (
-        <form id="form" className="login-form" onSubmit={handleSubmit}>
-          <Logo />
-          <LoginFormInput
-            id={'id'}
-            errorState={errorState}
-            setErrorState={setErrorState}
-            refState={refState}
-            setRefState={setRefState}
-            inputProps={{
-              type: 'text',
-              placeholder: '전화번호, 사용자의 이름 또는 이메일',
-            }}
-          />
-          <LoginFormInput
-            id={'pw'}
-            errorState={errorState}
-            setErrorState={setErrorState}
-            refState={refState}
-            setRefState={setRefState}
-            inputProps={{
-              type: 'password',
-              placeholder: '비밀번호',
-            }}
-          />
-          {errorState.id === true && errorState.pw === true ? (
-            <button id="button" type="submit" className="login-btn">
-              로그인
-            </button>
-          ) : (
-            <button id="button" type="submit" className="login-btn" disabled>
-              로그인
-            </button>
-          )}
-        </form>
+        <>
+          <Background />
+          <form id="form" className="login-form" onSubmit={handleSubmit}>
+            <Logo />
+            <LoginFormInput
+              id={'id'}
+              errorState={errorState}
+              setErrorState={setErrorState}
+              refState={refState}
+              setRefState={setRefState}
+              inputProps={{
+                type: 'text',
+                placeholder: '전화번호, 사용자의 이름 또는 이메일',
+              }}
+            />
+            <LoginFormInput
+              id={'pw'}
+              errorState={errorState}
+              setErrorState={setErrorState}
+              refState={refState}
+              setRefState={setRefState}
+              inputProps={{
+                type: 'password',
+                placeholder: '비밀번호',
+              }}
+            />
+            {errorState.id === true && errorState.pw === true ? (
+              <button id="button" type="submit" className="login-btn">
+                로그인
+              </button>
+            ) : (
+              <button id="button" type="submit" className="login-btn" disabled>
+                로그인
+              </button>
+            )}
+          </form>
+        </>
       )}
     </>
   );

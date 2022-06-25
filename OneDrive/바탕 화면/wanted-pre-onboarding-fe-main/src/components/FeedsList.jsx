@@ -11,8 +11,6 @@ export default function FeedList({ feed }) {
   const initailMsg = {
     id: '',
     msg: '',
-    userName: '',
-    // date:
   };
   const [msgState, setMsgState] = useState([initailMsg]);
 
@@ -66,6 +64,9 @@ export default function FeedList({ feed }) {
         {msgState && (
           <ul className="myMsgList">
             {msgState.map((msg) => {
+              if (msg.id === '') {
+                return;
+              }
               return (
                 <li key={msg.id}>
                   {id} : {msg.msg}
