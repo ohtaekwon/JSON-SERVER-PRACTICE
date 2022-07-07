@@ -1,11 +1,12 @@
 import React from "react";
 import { useMovieModel } from "./models/useMovieModel";
 function App() {
-  const { movies, getMovies } = useMovieModel();
+  const { movies, getServices } = useMovieModel();
   React.useEffect(() => {
-    getMovies();
+    getServices();
   }, []);
   console.log("this movies", movies);
+  // console.log("another", anotherMovies);
   return <div className="App"></div>;
 }
 
